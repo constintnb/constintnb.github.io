@@ -35,7 +35,7 @@ abstract: >-
   Index Terms—5G; C-RAN; Graph Neural Networks; LongShort-term Memory Networks; Computing Resource Allocation
 
 # 封面图片 (可选)
-cover:          /assets/images/covers/paper1.jpg
+cover:          
 
 # 作者列表 (支持特殊标记)
 authors:

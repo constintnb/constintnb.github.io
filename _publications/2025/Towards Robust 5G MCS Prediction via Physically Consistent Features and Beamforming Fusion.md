@@ -32,7 +32,7 @@ abstract: >-
   Scheme, Beamforming Fusion, Channel Feature Extraction
 
 # 封面图片 (可选)
-cover:          /assets/images/covers/paper1.jpg
+cover:          
 
 # 作者列表 (支持特殊标记)
 authors:

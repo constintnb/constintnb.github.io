@@ -1,28 +1,28 @@
 ---
 show: true
-width: 12           # 占满整行
-date: 2025-01-29    # 用于排序
-group: "日常点滴"    # 分组标题
+width: 12
+date: 2025-01-29
+group: "日常点滴"
 ---
 
 <div class="row">
-    {% comment %} 
-      遍历全站静态文件，寻找路径包含 'assets/images/daily/' 的文件 
-    {% endcomment %}
-    
     {% for file in site.static_files %}
         {% if file.path contains 'assets/images/daily/' %}
             
-            {% comment %} 获取文件后缀并转为小写，确保只显示图片 {% endcomment %}
             {% assign ext = file.extname | downcase %}
             
             {% if ext == '.jpg' or ext == '.jpeg' or ext == '.png' or ext == '.gif' %}
             <div class="col-6 col-md-4 mb-4">
                 <div class="card border-0 shadow-sm h-100">
-                    <img src="{{ file.path | relative_url }}" 
-                         class="card-img-top rounded" 
-                         style="height: 200px; object-fit: cover;" 
-                         alt="Daily Photo">
+                    <a href="{{ file.path | relative_url }}" 
+                       data-fancybox="gallery" 
+                       data-caption="{{ file.name }}">
+                        
+                        <img src="{{ file.path | relative_url }}" 
+                             class="card-img-top rounded" 
+                             style="height: 200px; object-fit: cover; cursor: zoom-in;" 
+                             alt="Daily Photo">
+                    </a>
                 </div>
             </div>
             {% endif %}
